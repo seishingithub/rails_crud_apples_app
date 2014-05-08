@@ -14,5 +14,9 @@ feature "user can manipulate apples" do
     click_on 'Create Apple' # POST create
     expect(page).to have_content("Macintosh")
     expect(page).to have_content("juicy")
+
+    click_on 'Macintosh'
+    expect(page).to have_content("Macintosh")
+    expect(page).to have_content("juicy")
   end
 end

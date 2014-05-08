@@ -14,4 +14,8 @@ class ApplesController < ApplicationController
     @apple.save
     redirect_to '/apples'
   end
+
+  def show
+    @apple = Apple.find(params[:id])
+  end
 end
