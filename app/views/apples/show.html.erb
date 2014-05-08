@@ -11,4 +11,14 @@
   <a href="/apples/<%= @apple.id %>/edit">Edit</a>
 </div>
 
+<form action="/apples/<%= @apple.id %>" method="post">
+  <input type="hidden" name="_method" value="delete" />
+  <input name="authenticity_token" type="hidden" value="<%= form_authenticity_token %>" />
+  <input type="submit" value="Delete">
+</form>
+
+<div class="actions">
+  <a href="/apples/">View Complete List of Apples</a>
+</div>
+
 

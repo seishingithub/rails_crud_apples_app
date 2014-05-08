@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/apples/:id', to: 'apples#show'
   get '/apples/:id/edit', to: 'apples#edit'
   put '/apples/:id', to: 'apples#update'
+  delete '/apples/:id', to: 'apples#destroy'
 
   # resources :apples
 end

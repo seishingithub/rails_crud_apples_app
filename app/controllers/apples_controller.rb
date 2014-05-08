@@ -30,4 +30,10 @@ class ApplesController < ApplicationController
     @apple.save
     redirect_to "/apples/#{@apple.id}"
   end
+
+  def destroy
+    @apple = Apple.find(params[:id])
+    @apple.destroy
+    redirect_to '/'
+  end
 end

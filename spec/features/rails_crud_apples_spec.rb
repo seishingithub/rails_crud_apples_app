@@ -29,6 +29,9 @@ feature "user can manipulate apples" do
 
     expect(page).to have_content("Golden Delicious")
     expect(page).to have_content("sweet")
-  end
 
+    click_on 'Delete'
+    expect(page).to have_no_content("Golden Delicious")
+    expect(page).to have_no_content("juicy")
+  end
 end
